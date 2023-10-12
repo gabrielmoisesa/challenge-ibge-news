@@ -1,10 +1,10 @@
-import './LatestNewsCard.css';
+import './LatestNewsArticle.css';
 import { useContext } from 'react';
 import GlobalContext from '../../context/GlobalContext';
 import formatDateToDaysAgo from '../../utils/formatDateToDaysAgo';
 import ButtonNewsLink from '../ButtonNewsLink/ButtonNewsLink';
 
-function LatestNewsCard() {
+function LatestNewsArticle() {
   const { data, isPending, error } = useContext(GlobalContext);
 
   if (isPending) return <p>Carregando...</p>;
@@ -33,4 +33,4 @@ function LatestNewsCard() {
   );
 }
 
-export default LatestNewsCard;
+export default LatestNewsArticle;

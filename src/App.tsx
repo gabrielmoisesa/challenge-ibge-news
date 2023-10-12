@@ -1,13 +1,13 @@
 import './App.css';
 import Header from './components/Header/Header';
-import LatestNewsCard from './components/LatestNewsCard/LatestNewsCard';
+import LatestNewsArticle from './components/LatestNewsArticle/LatestNewsCard';
 
 function App() {
   return (
     <>
       <Header />
       <main>
-        <LatestNewsCard />
+        <LatestNewsArticle />
       </main>
     </>
   );
