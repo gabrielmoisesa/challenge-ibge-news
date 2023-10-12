@@ -1,5 +1,7 @@
 export type GlobalContextType = {
   data: ApiResponseType;
+  isPending: boolean;
+  error: null | unknown | string;
 };
 
 export type ChildrenProviderProps = {
