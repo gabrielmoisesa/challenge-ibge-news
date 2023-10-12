@@ -1,0 +1,28 @@
+.main-header {
+  display: flex;
+  
+  .logo-container {
+    background-color: var(--green);
+    padding: 0 1.5vh;
+    width: fit-content;
+
+    & img {
+      padding: 4px;
+      width: 12vh;
+    }
+  }
+
+  .title-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--header-color);
+    width: 100%;
+
+    & h1 {
+      color: white;
+      font-size: 4.7vh;
+      letter-spacing: 1.6px;
+    }
+  }
+}
