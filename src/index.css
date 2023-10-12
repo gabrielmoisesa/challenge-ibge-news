@@ -1,4 +1,5 @@
 @import 'node_modules/modern-normalize/modern-normalize.css';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
 
 :root {
   --bg-color: #F1F2F3;
@@ -6,4 +7,13 @@
   --header-color: #272727;
   --green: #05D465;
   --red: #C31815;
+}
+
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }
