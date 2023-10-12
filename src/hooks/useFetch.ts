@@ -13,8 +13,10 @@ export const useFetch = (url: string) => {
         const response = await fetch(url);
         if (!response.ok) throw new Error(response.statusText);
         const json = await response.json();
+        const latestNewsImageInfo = JSON.parse(json?.items[0].imagens);
+        const imageIntro = `https://agenciadenoticias.ibge.gov.br/${latestNewsImageInfo.image_intro}`;
         setIsPending(false);
-        setData(json);
+        setData({ ...json, imageIntro });
         setError(null);
       } catch (err) {
         setError(err);

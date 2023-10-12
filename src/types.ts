@@ -10,6 +10,7 @@ export type ChildrenProviderProps = {
 
 export type ApiResponseType = {
   count: number;
+  imageIntro?: string;
   page: number;
   totalPages: number;
   nextPage: number;

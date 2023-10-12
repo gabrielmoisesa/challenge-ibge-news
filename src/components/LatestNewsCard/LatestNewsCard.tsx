@@ -1,6 +1,13 @@
+import { useContext } from 'react';
+import GlobalContext from '../../context/GlobalContext';
+
 function LatestNewsCard() {
+  const { data, isPending, error } = useContext(GlobalContext);
+
   return (
-    <article>LatestNewsCard</article>
+    <article>
+      <img src="" alt="" />
+    </article>
   );
 }
 
