@@ -1,6 +1,7 @@
 import { useContext } from 'react';
 import GlobalContext from '../../context/GlobalContext';
 import formatDateToDaysAgo from '../../utils/formatDateToDaysAgo';
+import ButtonNewsLink from '../ButtonNewsLink/ButtonNewsLink';
 
 function LatestNewsCard() {
   const { data, isPending, error } = useContext(GlobalContext);
@@ -22,7 +23,10 @@ function LatestNewsCard() {
         <p>Notícia mais recente</p>
         <h2>{titulo}</h2>
         <p>{introducao}</p>
-        <p>{daysAgo}</p>
+        <div>
+          <p>{daysAgo}</p>
+          <ButtonNewsLink link={ link } />
+        </div>
       </div>
     </article>
   );
