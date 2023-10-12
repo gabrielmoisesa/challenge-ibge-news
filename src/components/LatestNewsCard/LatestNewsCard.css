@@ -1,16 +1,18 @@
 .latest-news-article {
   display: flex;
   align-items: center;
-  gap: 3rem;
+  justify-content: center;
+  gap: 4rem;
   max-width: 80vw;
+  margin-top: 5rem;
 
   & img {
-    width: 35rem;
-    height: 22.5rem;
+    width: 35vw;
+    height: 23vw;
   }
 
   .latest-news-info {
-    width: 45%;
+    width: 37%;
 
     > p:nth-child(1) {
       color: var(--red);
@@ -24,6 +26,7 @@
     .latest-news-footer {
       display: flex;
       justify-content: space-between;
+      align-items: center;
       padding-right: 1.5rem;
     }
   }
