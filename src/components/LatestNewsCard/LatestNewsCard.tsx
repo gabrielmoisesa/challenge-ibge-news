@@ -1,3 +1,4 @@
+import './LatestNewsCard.css';
 import { useContext } from 'react';
 import GlobalContext from '../../context/GlobalContext';
 import formatDateToDaysAgo from '../../utils/formatDateToDaysAgo';
@@ -17,13 +18,13 @@ function LatestNewsCard() {
   const daysAgo = formatDateToDaysAgo(data_publicacao);
 
   return (
-    <article>
+    <article className="latest-news-article">
       <img src={ data.imageIntro } alt="" />
-      <div>
+      <div className="latest-news-info">
         <p>Notícia mais recente</p>
         <h2>{titulo}</h2>
-        <p>{introducao}</p>
-        <div>
+        <p className="latest-news-introduction">{introducao}</p>
+        <div className="latest-news-footer">
           <p>{daysAgo}</p>
           <ButtonNewsLink link={ link } />
         </div>
