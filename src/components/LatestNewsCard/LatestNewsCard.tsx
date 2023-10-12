@@ -4,6 +4,14 @@ import formatDateToDaysAgo from '../../utils/formatDateToDaysAgo';
 
 function LatestNewsCard() {
   const { data, isPending, error } = useContext(GlobalContext);
+
+  if (isPending) return <p>Carregando...</p>;
+  if (error) return <p>{JSON.stringify(error)}</p>;
+  if (!data || !data.items || data.items.length === 0) {
+    return <p>Não há dados disponíveis</p>;
+  }
+
+  // eslint-disable-next-line @typescript-eslint/naming-convention
   const { titulo, introducao, data_publicacao, link } = data.items[0];
   const daysAgo = formatDateToDaysAgo(data_publicacao);
 
