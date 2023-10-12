@@ -1,9 +1,8 @@
 .latest-news-article {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 4rem;
-  max-width: 80vw;
+  width: 80vw;
+  gap: 3.8vw;
   margin-top: 5rem;
 
   & img {
