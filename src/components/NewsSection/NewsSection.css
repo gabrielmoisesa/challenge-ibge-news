@@ -1,0 +1,16 @@
+.news-section {
+  margin-top: 8rem;
+  width: 80vw;
+
+  .news-filters-container {
+    display: flex;
+    align-items: center;
+    padding: 1rem 1rem;
+    background-color: white;
+
+    & button {
+      border: none;
+      background: none;
+    }
+  }
+}
