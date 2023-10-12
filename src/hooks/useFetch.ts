@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react';
+import { ApiResponseType } from '../types';
 
 // Modified Use Fetch Hook from https://blog.openreplay.com/building-a-custom-fetch-hook-in-react/
 export const useFetch = (url: string) => {
-  const [data, setData] = useState(null);
+  const [data, setData] = useState({} as ApiResponseType);
   const [isPending, setIsPending] = useState(false);
   const [error, setError] = useState<null | unknown | string>(null);
   useEffect(() => {

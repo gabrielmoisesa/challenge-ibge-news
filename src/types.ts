@@ -2,6 +2,10 @@ export type GlobalContextType = {
   data: ApiResponseType;
 };
 
+export type ChildrenProviderProps = {
+  children: React.ReactNode;
+};
+
 export type ApiResponseType = {
   count: number;
   page: number;
