@@ -1,6 +1,7 @@
 import './App.css';
 import Header from './components/Header/Header';
 import LatestNewsArticle from './components/LatestNewsArticle/LatestNewsCard';
+import NewsSection from './components/NewsSection/NewsSection';
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <Header />
       <main>
         <LatestNewsArticle />
+        <NewsSection />
       </main>
     </>
   );
