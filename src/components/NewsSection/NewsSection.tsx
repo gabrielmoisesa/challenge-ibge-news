@@ -1,4 +1,5 @@
 import './NewsSection.css';
+import SortNews from '../SortNews/SortNews';
 
 function NewsSection() {
   return (
@@ -8,6 +9,7 @@ function NewsSection() {
         <button>Release</button>
         <button>Notícia</button>
         <button>Favoritas</button>
+        <SortNews />
       </div>
     </section>
   );
