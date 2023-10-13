@@ -1,11 +1,16 @@
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import GlobalContext from '../../context/GlobalContext';
 
 function ButtonLoadMoreNews() {
-  const { loadMoreNews } = useContext(GlobalContext);
+  const { loadMoreNews, newsQtd } = useContext(GlobalContext);
+  const [isQtdMax, setIsQtdMax] = useState(false);
+
+  const handleClick = () => (newsQtd < 50
+    ? loadMoreNews(newsQtd + 9)
+    : setIsQtdMax(true));
 
   return (
-    <button>
+    <button onClick={ handleClick }>
       MAIS NOTÍCIAS
     </button>
   );
