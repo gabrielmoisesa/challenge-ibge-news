@@ -34,3 +34,10 @@ export type Item = {
   destaque: boolean;
   link: string;
 };
+
+export type NewsArticleProps = {
+  title: string;
+  description: string;
+  date: string;
+  link: string;
+};
