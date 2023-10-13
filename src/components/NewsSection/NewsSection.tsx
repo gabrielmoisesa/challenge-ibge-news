@@ -24,7 +24,7 @@ function NewsSection() {
         </div>
         <SortNews />
       </div>
-      <div>
+      <div className="news-article-container">
         {data.items.slice(1).map((item) => (
           <NewsArticle
             key={ item.id }

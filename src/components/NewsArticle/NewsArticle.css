@@ -1,0 +1,12 @@
+.news-article {
+  background-color: white;
+  width: calc(33.33% - 1rem);
+  min-height: 35vh;
+  padding: 1rem 1.5rem;
+
+  .news-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
