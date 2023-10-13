@@ -5,9 +5,14 @@
   .news-filters-container {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     padding: 1rem 1rem;
     background-color: white;
-    gap: 1rem;
+
+    .filters-container {
+      display: flex;
+      gap: 1rem;
+    }
 
     & button {
       border: none;
