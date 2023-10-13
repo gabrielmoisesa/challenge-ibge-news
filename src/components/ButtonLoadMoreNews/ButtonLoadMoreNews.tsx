@@ -9,6 +9,8 @@ function ButtonLoadMoreNews() {
     ? loadMoreNews(newsQtd + 9)
     : setIsQtdMax(true));
 
+  if (isQtdMax) return null;
+
   return (
     <button onClick={ handleClick }>
       MAIS NOTÍCIAS
