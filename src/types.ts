@@ -2,6 +2,7 @@ export type GlobalContextType = {
   data: ApiResponseType;
   isPending: boolean;
   error: null | unknown | string;
+  newsQtd: number;
   loadMoreNews: (qtd: number) => void;
 };
 

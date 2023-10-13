@@ -13,6 +13,7 @@ function GlobalProvider({ children }: ChildrenProviderProps) {
     data,
     isPending,
     error,
+    newsQtd,
     loadMoreNews,
   };
 
