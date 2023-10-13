@@ -1,0 +1,9 @@
+.sort-icon {
+  & path {
+    transition: fill 0.3s;
+  }
+
+  &:hover path {
+      fill: var(--green)
+    }
+}

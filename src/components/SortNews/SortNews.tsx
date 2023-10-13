@@ -9,6 +9,7 @@ function SortNews() {
       height="27"
       viewBox="0 0 43 27"
       fill="none"
+      className="sort-icon"
     >
       <path
         fillRule="evenodd"
