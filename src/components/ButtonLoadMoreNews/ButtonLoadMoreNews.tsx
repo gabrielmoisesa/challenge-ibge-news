@@ -1,3 +1,4 @@
+import './ButtonLoadMoreNews.css';
 import { useContext, useState } from 'react';
 import GlobalContext from '../../context/GlobalContext';
 
@@ -12,7 +13,7 @@ function ButtonLoadMoreNews() {
   if (isQtdMax) return null;
 
   return (
-    <button onClick={ handleClick }>
+    <button onClick={ handleClick } className="load-news-button">
       MAIS NOTÍCIAS
     </button>
   );
