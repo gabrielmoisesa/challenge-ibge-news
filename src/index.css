@@ -17,3 +17,7 @@
 body {
   background-color: var(--bg-color);
 }
+
+button {
+  cursor: pointer;
+}
