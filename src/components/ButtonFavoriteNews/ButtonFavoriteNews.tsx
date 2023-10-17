@@ -3,12 +3,12 @@ import { NewsArticleProps } from '../../types';
 import './ButtonFavoriteNews.css';
 
 const toggleFavorite = (article: NewsArticleProps) => {
-  const favorites = JSON.parse(localStorage.getItem('favoriteArticles')) || [];
+  const favorites = JSON.parse(localStorage.getItem('favoriteArticles') || '{}') || [];
 
-  const isAlreadyFavorite = favorites.some((favorite) => favorite.id === article.id);
+  const isAlreadyFavorite = favorites.some((favorite: NewsArticleProps) => favorite.id === article.id);
 
   if (isAlreadyFavorite) {
-    const updatedFavorites = favorites.filter((favorite) => favorite.id !== article.id);
+    const updatedFavorites = favorites.filter((favorite: NewsArticleProps) => favorite.id !== article.id);
     localStorage.setItem('favoriteArticles', JSON.stringify(updatedFavorites));
   } else {
     favorites.push(article);
