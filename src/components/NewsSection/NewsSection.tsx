@@ -4,6 +4,7 @@ import SortNews from '../SortNews/SortNews';
 import GlobalContext from '../../context/GlobalContext';
 import NewsArticle from '../NewsArticle/NewsArticle';
 import { NewsArticleProps } from '../../types';
+import ButtonLoadMoreNews from '../ButtonLoadMoreNews/ButtonLoadMoreNews';
 
 function NewsSection() {
   const { data, isPending, error } = useContext(GlobalContext);
@@ -79,6 +80,11 @@ function NewsSection() {
             />
           ))}
       </div>
+      {filter !== 'Favoritas' && (
+        <div className="button-load-more-news-container">
+          <ButtonLoadMoreNews />
+        </div>
+      )}
     </section>
   );
 }
