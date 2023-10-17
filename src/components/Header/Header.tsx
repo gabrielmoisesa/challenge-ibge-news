@@ -8,7 +8,7 @@ function Header() {
         <img src={ brMapImg } alt="Brazil Map Logo" />
       </div>
       <div className="title-container">
-        <h1>IBGE NEWS</h1>
+        <a href="/"><h1>IBGE NEWS</h1></a>
       </div>
     </header>
   );
