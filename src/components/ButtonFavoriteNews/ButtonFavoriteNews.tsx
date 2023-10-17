@@ -1,7 +1,9 @@
 /* eslint-disable max-len */
+import './ButtonFavoriteNews.css';
+
 function ButtonFavoriteNews() {
   return (
-    <button>
+    <button className="favorite-news-btn">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="18"
