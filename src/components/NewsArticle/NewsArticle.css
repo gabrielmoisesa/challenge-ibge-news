@@ -4,16 +4,20 @@
   min-height: 35vh;
   
   .news-content-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     padding: 1rem 1.5rem;
     padding-bottom: 0;
     border-bottom: 1px solid rgba(128, 128, 128, 0.212);
     height: 85%;
 
     .news-content {
-      height: 65%;
+      height: 60%;
     }
 
     .news-footer {
+      margin-top: 1rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
