@@ -3,6 +3,7 @@ import { useContext, useState } from 'react';
 import SortNews from '../SortNews/SortNews';
 import GlobalContext from '../../context/GlobalContext';
 import NewsArticle from '../NewsArticle/NewsArticle';
+import { NewsArticleProps } from '../../types';
 
 function NewsSection() {
   const { data, isPending, error } = useContext(GlobalContext);
@@ -14,13 +15,17 @@ function NewsSection() {
     return <p>Não há dados disponíveis</p>;
   }
 
-  const favorites = JSON.parse(localStorage.getItem('favoriteArticles')) || [];
+  const favorites = JSON.parse(localStorage.getItem('favoriteArticles') || '[]');
 
-  const filteredNews = filter === 'Notícia' || filter === 'Release'
-    ? data.items.filter((item) => item.tipo === filter)
-    : filter === 'Favoritas'
-      ? favorites
-      : data.items.slice(1);
+  let filteredNews = data.items.slice(1);
+
+  if (filter === 'Notícia') {
+    filteredNews = data.items.filter((item) => item.tipo === filter);
+  } else if (filter === 'Release') {
+    filteredNews = data.items.filter((item) => item.tipo === filter);
+  } else if (filter === 'Favoritas') {
+    filteredNews = favorites;
+  }
 
   const selectedFilterClassName = 'selected-filter';
 
@@ -54,7 +59,7 @@ function NewsSection() {
         <SortNews />
       </div>
       <div className="news-article-container">
-        {filteredNews.map((item) => (
+        {filteredNews.map((item: NewsArticleProps) => (
           <NewsArticle
             key={ item.id }
             id={ item.id }
