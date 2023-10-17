@@ -3,6 +3,11 @@
   width: calc(33.33% - 1rem);
   min-height: 35vh;
   box-shadow: 0px 2px 10px rgba(42, 42, 42, 0.24);
+  transition: 0.3s;
+
+  &:hover {
+    box-shadow: 0px 6px 22px rgba(42, 42, 42, 0.24);
+  }
   
   .news-content-container {
     display: flex;
