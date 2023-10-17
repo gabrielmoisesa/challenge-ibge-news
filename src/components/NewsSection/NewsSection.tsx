@@ -17,16 +17,18 @@ function NewsSection() {
 
   const favorites = JSON.parse(localStorage.getItem('favoriteArticles') || '[]');
 
-  let filteredNews = data.items.slice(1);
+  const getFilteredNews = (selectedFilter: string) => {
+    switch (selectedFilter) {
+      case 'Notícia' || 'Release':
+        return data.items.filter((item) => item.tipo === selectedFilter);
+      case 'Favoritas':
+        return favorites;
+      default:
+        return data.items.slice(1);
+    }
+  };
 
-  if (filter === 'Notícia') {
-    filteredNews = data.items.filter((item) => item.tipo === filter);
-  } else if (filter === 'Release') {
-    filteredNews = data.items.filter((item) => item.tipo === filter);
-  } else if (filter === 'Favoritas') {
-    filteredNews = favorites;
-  }
-
+  const filteredNews = getFilteredNews(filter);
   const selectedFilterClassName = 'selected-filter';
 
   return (
@@ -34,9 +36,7 @@ function NewsSection() {
       <div className="news-filters-container">
         <div className="filters-container">
           <button onClick={ () => setFilter('') }>
-            <span
-              className={ filter === '' ? selectedFilterClassName : '' }
-            >
+            <span className={ filter === '' ? selectedFilterClassName : '' }>
               Mais recentes
             </span>
           </button>
@@ -65,16 +65,18 @@ function NewsSection() {
         <SortNews />
       </div>
       <div className="news-article-container">
-        {filteredNews.map((item: NewsArticleProps) => (
-          <NewsArticle
-            key={ item.id }
-            id={ item.id }
-            titulo={ item.titulo }
-            introducao={ item.introducao }
-            data_publicacao={ item.data_publicacao }
-            link={ item.link }
-          />
-        ))}
+        {filter === 'Favoritas' && filteredNews.length <= 0
+          ? <p className="no-fav-news-message">Não há notícias favoritas...</p>
+          : filteredNews.map((item: NewsArticleProps) => (
+            <NewsArticle
+              key={ item.id }
+              id={ item.id }
+              titulo={ item.titulo }
+              introducao={ item.introducao }
+              data_publicacao={ item.data_publicacao }
+              link={ item.link }
+            />
+          ))}
       </div>
     </section>
   );
