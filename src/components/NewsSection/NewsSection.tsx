@@ -18,13 +18,33 @@ function NewsSection() {
     ? data.items.filter((item) => item.tipo === filter)
     : data.items.slice(1);
 
+  const selectedFilterClassName = 'selected-filter';
+
   return (
     <section className="news-section">
       <div className="news-filters-container">
         <div className="filters-container">
-          <button onClick={ () => setFilter('') }>Mais recentes</button>
-          <button onClick={ () => setFilter('Release') }>Release</button>
-          <button onClick={ () => setFilter('Notícia') }>Notícia</button>
+          <button onClick={ () => setFilter('') }>
+            <span
+              className={ filter === '' ? selectedFilterClassName : '' }
+            >
+              Mais recentes
+            </span>
+          </button>
+          <button onClick={ () => setFilter('Release') }>
+            <span
+              className={ filter === 'Release' ? selectedFilterClassName : '' }
+            >
+              Release
+            </span>
+          </button>
+          <button onClick={ () => setFilter('Notícia') }>
+            <span
+              className={ filter === 'Notícia' ? selectedFilterClassName : '' }
+            >
+              Notícia
+            </span>
+          </button>
           <button>Favoritas</button>
         </div>
         <SortNews />

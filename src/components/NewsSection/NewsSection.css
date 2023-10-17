@@ -12,6 +12,10 @@
     .filters-container {
       display: flex;
       gap: 1rem;
+      
+      .selected-filter {
+        border-bottom: 1px solid var(--red);
+      }
     }
 
     & button {
