@@ -2,6 +2,7 @@ import './NewsArticle.css';
 import { NewsArticleProps } from '../../types';
 import formatDateToDaysAgo from '../../utils/formatDateToDaysAgo';
 import ButtonNewsLink from '../ButtonNewsLink/ButtonNewsLink';
+import ButtonFavoriteNews from '../ButtonFavoriteNews/ButtonFavoriteNews';
 
 function NewsArticle(props: NewsArticleProps) {
   const { title, description, date, link } = props;
@@ -15,6 +16,7 @@ function NewsArticle(props: NewsArticleProps) {
         <p>{daysAgo}</p>
         <ButtonNewsLink link={ link } />
       </div>
+      <ButtonFavoriteNews />
     </article>
   );
 }
