@@ -8,4 +8,5 @@
 .favorite-news-icon > path {
   fill: var(--red);
   stroke: none;
+  transition: 0.3s ease-in-out;
 }
