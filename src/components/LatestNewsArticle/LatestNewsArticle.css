@@ -13,9 +13,15 @@
   .latest-news-info {
     width: 37%;
 
-    > p:nth-child(1) {
-      color: var(--red);
-      font-weight: 500;
+    .top-container {
+      display: flex;
+      justify-content: space-between;
+      padding-right: 1rem;
+
+      > p:nth-child(1) {
+        color: var(--red);
+        font-weight: 500;
+      }
     }
 
     .latest-news-introduction {
