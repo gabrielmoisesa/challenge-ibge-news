@@ -54,7 +54,13 @@ function NewsSection() {
               Notícia
             </span>
           </button>
-          <button onClick={ () => setFilter('Favoritas') }>Favoritas</button>
+          <button onClick={ () => setFilter('Favoritas') }>
+            <span
+              className={ filter === 'Favoritas' ? selectedFilterClassName : '' }
+            >
+              Favoritas
+            </span>
+          </button>
         </div>
         <SortNews />
       </div>
