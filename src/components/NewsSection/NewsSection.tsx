@@ -53,6 +53,7 @@ function NewsSection() {
         {filteredNews.map((item) => (
           <NewsArticle
             key={ item.id }
+            id={ item.id }
             title={ item.titulo }
             description={ item.introducao }
             date={ item.data_publicacao }

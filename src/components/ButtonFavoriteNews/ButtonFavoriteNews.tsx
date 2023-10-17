@@ -1,9 +1,30 @@
 /* eslint-disable max-len */
+import { NewsArticleProps } from '../../types';
 import './ButtonFavoriteNews.css';
 
-function ButtonFavoriteNews() {
+const toggleFavorite = (article: NewsArticleProps) => {
+  const favorites = JSON.parse(localStorage.getItem('favoriteArticles')) || [];
+
+  const isAlreadyFavorite = favorites.some((favorite) => favorite.id === article.id);
+
+  if (isAlreadyFavorite) {
+    const updatedFavorites = favorites.filter((favorite) => favorite.id !== article.id);
+    localStorage.setItem('favoriteArticles', JSON.stringify(updatedFavorites));
+  } else {
+    favorites.push(article);
+    localStorage.setItem('favoriteArticles', JSON.stringify(favorites));
+  }
+};
+
+function ButtonFavoriteNews(props: NewsArticleProps) {
+  const { title, description, date, link, id } = props;
+
+  const handleToggleFavorite = () => {
+    toggleFavorite({ id, title, description, date, link });
+  };
+
   return (
-    <button className="favorite-news-btn">
+    <button onClick={ handleToggleFavorite } className="favorite-news-btn">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="18"

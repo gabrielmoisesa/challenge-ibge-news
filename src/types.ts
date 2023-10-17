@@ -38,6 +38,7 @@ export type Item = {
 };
 
 export type NewsArticleProps = {
+  id: number;
   title: string;
   description: string;
   date: string;

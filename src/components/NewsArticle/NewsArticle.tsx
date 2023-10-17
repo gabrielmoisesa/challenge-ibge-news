@@ -5,7 +5,7 @@ import ButtonNewsLink from '../ButtonNewsLink/ButtonNewsLink';
 import ButtonFavoriteNews from '../ButtonFavoriteNews/ButtonFavoriteNews';
 
 function NewsArticle(props: NewsArticleProps) {
-  const { title, description, date, link } = props;
+  const { id, title, description, date, link } = props;
   const daysAgo = formatDateToDaysAgo(date);
 
   return (
@@ -16,7 +16,13 @@ function NewsArticle(props: NewsArticleProps) {
         <p>{daysAgo}</p>
         <ButtonNewsLink link={ link } />
       </div>
-      <ButtonFavoriteNews />
+      <ButtonFavoriteNews
+        id={ id }
+        title={ title }
+        description={ description }
+        date={ date }
+        link={ link }
+      />
     </article>
   );
 }
