@@ -11,19 +11,25 @@ function NewsArticle(props: NewsArticleProps) {
 
   return (
     <article className="news-article">
-      <h3>{titulo}</h3>
-      <p>{introducao}</p>
-      <div className="news-footer">
-        <p>{daysAgo}</p>
-        <ButtonNewsLink link={ link } />
+      <div className="news-content-container">
+        <div className="news-content">
+          <h3>{titulo}</h3>
+          <p>{introducao}</p>
+        </div>
+        <div className="news-footer">
+          <p>{daysAgo}</p>
+          <ButtonNewsLink link={ link } />
+        </div>
       </div>
-      <ButtonFavoriteNews
-        id={ id }
-        titulo={ titulo }
-        introducao={ introducao }
-        data_publicacao={ data_publicacao }
-        link={ link }
-      />
+      <div className="fav-news-btn-container">
+        <ButtonFavoriteNews
+          id={ id }
+          titulo={ titulo }
+          introducao={ introducao }
+          data_publicacao={ data_publicacao }
+          link={ link }
+        />
+      </div>
     </article>
   );
 }

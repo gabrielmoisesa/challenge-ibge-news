@@ -2,11 +2,28 @@
   background-color: white;
   width: calc(33.33% - 1rem);
   min-height: 35vh;
-  padding: 1rem 1.5rem;
+  
+  .news-content-container {
+    padding: 1rem 1.5rem;
+    padding-bottom: 0;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.212);
+    height: 85%;
 
-  .news-footer {
+    .news-content {
+      height: 65%;
+    }
+
+    .news-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  .fav-news-btn-container {
+    margin-top: 1rem;
+    padding-right: 1rem;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    flex-direction: row-reverse;
   }
 }
