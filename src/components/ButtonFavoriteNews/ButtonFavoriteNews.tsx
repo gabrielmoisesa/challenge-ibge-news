@@ -17,10 +17,11 @@ const toggleFavorite = (article: NewsArticleProps) => {
 };
 
 function ButtonFavoriteNews(props: NewsArticleProps) {
-  const { title, description, date, link, id } = props;
+  // eslint-disable-next-line @typescript-eslint/naming-convention
+  const { titulo, introducao, data_publicacao, link, id } = props;
 
   const handleToggleFavorite = () => {
-    toggleFavorite({ id, title, description, date, link });
+    toggleFavorite({ id, titulo, introducao, data_publicacao, link });
   };
 
   return (

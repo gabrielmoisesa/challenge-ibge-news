@@ -14,9 +14,13 @@ function NewsSection() {
     return <p>Não há dados disponíveis</p>;
   }
 
-  const filteredNews = (filter === 'Notícia' || filter === 'Release')
+  const favorites = JSON.parse(localStorage.getItem('favoriteArticles')) || [];
+
+  const filteredNews = filter === 'Notícia' || filter === 'Release'
     ? data.items.filter((item) => item.tipo === filter)
-    : data.items.slice(1);
+    : filter === 'Favoritas'
+      ? favorites
+      : data.items.slice(1);
 
   const selectedFilterClassName = 'selected-filter';
 
@@ -45,7 +49,7 @@ function NewsSection() {
               Notícia
             </span>
           </button>
-          <button>Favoritas</button>
+          <button onClick={ () => setFilter('Favoritas') }>Favoritas</button>
         </div>
         <SortNews />
       </div>
@@ -54,9 +58,9 @@ function NewsSection() {
           <NewsArticle
             key={ item.id }
             id={ item.id }
-            title={ item.titulo }
-            description={ item.introducao }
-            date={ item.data_publicacao }
+            titulo={ item.titulo }
+            introducao={ item.introducao }
+            data_publicacao={ item.data_publicacao }
             link={ item.link }
           />
         ))}

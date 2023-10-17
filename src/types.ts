@@ -39,8 +39,8 @@ export type Item = {
 
 export type NewsArticleProps = {
   id: number;
-  title: string;
-  description: string;
-  date: string;
+  titulo: string;
+  introducao: string;
+  data_publicacao: string;
   link: string;
 };
