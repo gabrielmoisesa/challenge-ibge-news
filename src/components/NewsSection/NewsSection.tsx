@@ -19,7 +19,8 @@ function NewsSection() {
 
   const getFilteredNews = (selectedFilter: string) => {
     switch (selectedFilter) {
-      case 'Notícia' || 'Release':
+      case 'Notícia':
+      case 'Release':
         return data.items.filter((item) => item.tipo === selectedFilter);
       case 'Favoritas':
         return favorites;
