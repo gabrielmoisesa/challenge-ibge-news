@@ -1,6 +1,8 @@
 .favorite-news-btn {
   border: none;
   background: none;
+  width: fit-content;
+  height: fit-content;
 }
 
 .favorite-news-icon > path {
