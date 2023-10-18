@@ -7,7 +7,7 @@ import { NewsArticleProps } from '../../types';
 import ButtonLoadMoreNews from '../ButtonLoadMoreNews/ButtonLoadMoreNews';
 
 function NewsSection() {
-  const { data, isPending, error, favoriteRender } = useContext(GlobalContext);
+  const { data, isPending, error, favoriteRender, newsQtd } = useContext(GlobalContext);
   const [filter, setFilter] = useState('');
   const [favorites, setFavorites] = useState<NewsArticleProps[]>([]);
 
@@ -75,7 +75,7 @@ function NewsSection() {
       <div className="news-article-container">
         {filter === 'Favoritas' && filteredNews.length <= 0
           ? <p className="no-fav-news-message">Não há notícias favoritas...</p>
-          : filteredNews.map((item: NewsArticleProps) => (
+          : filteredNews.slice(0, newsQtd).map((item: NewsArticleProps) => (
             <NewsArticle
               key={ item.id }
               id={ item.id }

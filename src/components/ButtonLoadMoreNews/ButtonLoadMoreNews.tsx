@@ -3,14 +3,14 @@ import { useContext, useState } from 'react';
 import GlobalContext from '../../context/GlobalContext';
 
 function ButtonLoadMoreNews() {
-  const { loadMoreNews, newsQtd } = useContext(GlobalContext);
+  const { loadMoreNews, newsQtd, maxNewsQtd } = useContext(GlobalContext);
   const [isQtdMax, setIsQtdMax] = useState(false);
 
-  const handleClick = () => (newsQtd < 50
+  const handleClick = () => (newsQtd < maxNewsQtd
     ? loadMoreNews(newsQtd + 9)
     : setIsQtdMax(true));
 
-  if (isQtdMax) return null;
+  if (isQtdMax || newsQtd > maxNewsQtd) return null;
 
   return (
     <button onClick={ handleClick } className="load-news-button">

@@ -4,9 +4,10 @@ import { ChildrenProviderProps } from '../types';
 import GlobalContext from './GlobalContext';
 
 function GlobalProvider({ children }: ChildrenProviderProps) {
-  const [newsQtd, setNewsQtd] = useState(10);
+  const [newsQtd, setNewsQtd] = useState(9);
   const [favoriteRender, setFavoriteRender] = useState(false);
-  const { data, isPending, error } = useFetch(`https://servicodados.ibge.gov.br/api/v3/noticias/?qtd=${newsQtd}`);
+  const maxNewsQtd = 49;
+  const { data, isPending, error } = useFetch(`https://servicodados.ibge.gov.br/api/v3/noticias/?qtd=${maxNewsQtd}`);
 
   const loadMoreNews = (qtd: number) => setNewsQtd(qtd);
   const toggleFavoriteRender = () => setFavoriteRender(!favoriteRender);
@@ -16,6 +17,7 @@ function GlobalProvider({ children }: ChildrenProviderProps) {
     isPending,
     error,
     newsQtd,
+    maxNewsQtd,
     loadMoreNews,
     toggleFavoriteRender,
     favoriteRender,

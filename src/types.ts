@@ -3,6 +3,7 @@ export type GlobalContextType = {
   isPending: boolean;
   error: null | unknown | string;
   newsQtd: number;
+  maxNewsQtd: number;
   loadMoreNews: (qtd: number) => void;
   toggleFavoriteRender: () => void;
   favoriteRender: boolean;
