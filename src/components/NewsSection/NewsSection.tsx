@@ -75,19 +75,29 @@ function NewsSection() {
           <SortNewsIcon />
         </button>
       </div>
-      <div className={ `news-article-container ${changeNewsLayout && 'column-layout'}` }>
-        {filter === 'Favoritas' && filteredNews.length <= 0
-          ? <p className="no-fav-news-message">Não há notícias favoritas...</p>
-          : filteredNews.slice(0, newsQtd).map((item: NewsArticleProps) => (
-            <NewsArticle
-              key={ item.id }
-              id={ item.id }
-              titulo={ item.titulo }
-              introducao={ item.introducao }
-              data_publicacao={ item.data_publicacao }
-              link={ item.link }
-            />
-          ))}
+      <div
+        className={
+          changeNewsLayout
+            ? 'news-article-container column-layout'
+            : 'news-article-container'
+        }
+      >
+        {filter === 'Favoritas' && filteredNews.length <= 0 ? (
+          <p className="no-fav-news-message">Não há notícias favoritas...</p>
+        ) : (
+          filteredNews
+            .slice(0, newsQtd)
+            .map((item: NewsArticleProps) => (
+              <NewsArticle
+                key={ item.id }
+                id={ item.id }
+                titulo={ item.titulo }
+                introducao={ item.introducao }
+                data_publicacao={ item.data_publicacao }
+                link={ item.link }
+              />
+            ))
+        )}
       </div>
       {filter !== 'Favoritas' && (
         <div className="button-load-more-news-container">
