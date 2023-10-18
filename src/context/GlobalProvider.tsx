@@ -10,7 +10,6 @@ function GlobalProvider({ children }: ChildrenProviderProps) {
 
   const loadMoreNews = (qtd: number) => setNewsQtd(qtd);
   const toggleFavoriteRender = () => setFavoriteRender(!favoriteRender);
-  console.log(favoriteRender);
 
   const contextValue = {
     data,
