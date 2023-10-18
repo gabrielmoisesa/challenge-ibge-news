@@ -186,7 +186,7 @@ export const mockData = {
   ],
 };
 
-export const contextValue = {
+export const mockContextValue = {
   data: mockData,
   isPending: false,
   error: false,

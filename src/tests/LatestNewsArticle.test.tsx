@@ -1,12 +1,12 @@
 import { render, screen } from '@testing-library/react';
 import App from '../App';
 import GlobalContext from '../context/GlobalContext';
-import { contextValue, mockData } from './mocks';
+import { mockContextValue, mockData } from './mocks';
 
 describe('Latest News Article', () => {
   beforeEach(() => {
     render(
-      <GlobalContext.Provider value={ contextValue }>
+      <GlobalContext.Provider value={ mockContextValue }>
         <App />
       </GlobalContext.Provider>,
     );
