@@ -10,6 +10,7 @@ function NewsSection() {
   const { data, isPending, error, favoriteRender, newsQtd } = useContext(GlobalContext);
   const [filter, setFilter] = useState('');
   const [favorites, setFavorites] = useState<NewsArticleProps[]>([]);
+  const [changeNewsLayout, setChangeNewsLayout] = useState(false);
 
   useEffect(() => {
     const favoritesArticles = JSON.parse(
@@ -70,9 +71,11 @@ function NewsSection() {
             </span>
           </button>
         </div>
-        <SortNewsIcon />
+        <button onClick={ () => setChangeNewsLayout(!changeNewsLayout) }>
+          <SortNewsIcon />
+        </button>
       </div>
-      <div className="news-article-container">
+      <div className={ `news-article-container ${changeNewsLayout && 'column-layout'}` }>
         {filter === 'Favoritas' && filteredNews.length <= 0
           ? <p className="no-fav-news-message">Não há notícias favoritas...</p>
           : filteredNews.slice(0, newsQtd).map((item: NewsArticleProps) => (
