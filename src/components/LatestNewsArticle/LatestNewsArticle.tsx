@@ -20,7 +20,7 @@ function LatestNewsArticle() {
 
   return (
     <article className="latest-news-article">
-      <img src={ data.imageIntro } alt="" />
+      <img src={ data.imageIntro } alt="" data-testid="latest-news-img" />
       <div className="latest-news-info">
         <div className="top-container">
           <p>Notícia mais recente</p>
