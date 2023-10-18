@@ -4,6 +4,8 @@ export type GlobalContextType = {
   error: null | unknown | string;
   newsQtd: number;
   loadMoreNews: (qtd: number) => void;
+  toggleFavoriteRender: () => void;
+  favoriteRender: boolean;
 };
 
 export type ChildrenProviderProps = {

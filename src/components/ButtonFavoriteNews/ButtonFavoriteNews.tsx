@@ -1,8 +1,9 @@
 /* eslint-disable max-len */
 /* eslint-disable @typescript-eslint/naming-convention */
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import { NewsArticleProps } from '../../types';
 import './ButtonFavoriteNews.css';
+import GlobalContext from '../../context/GlobalContext';
 
 const toggleFavorite = (article: NewsArticleProps) => {
   const favorites = JSON.parse(localStorage.getItem('favoriteArticles') || '[]');
@@ -24,6 +25,7 @@ const toggleFavorite = (article: NewsArticleProps) => {
 
 function ButtonFavoriteNews(props: NewsArticleProps) {
   const { titulo, introducao, data_publicacao, link, id } = props;
+  const { toggleFavoriteRender } = useContext(GlobalContext);
   const [isFavorite, setIsFavorite] = useState(false);
 
   useEffect(() => {
@@ -37,6 +39,7 @@ function ButtonFavoriteNews(props: NewsArticleProps) {
   const handleToggleFavorite = () => {
     toggleFavorite({ id, titulo, introducao, data_publicacao, link });
     setIsFavorite(!isFavorite);
+    toggleFavoriteRender();
   };
 
   return (

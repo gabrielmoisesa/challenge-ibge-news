@@ -1,5 +1,5 @@
 import './NewsSection.css';
-import { useContext, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import SortNews from '../SortNews/SortNews';
 import GlobalContext from '../../context/GlobalContext';
 import NewsArticle from '../NewsArticle/NewsArticle';
@@ -7,16 +7,22 @@ import { NewsArticleProps } from '../../types';
 import ButtonLoadMoreNews from '../ButtonLoadMoreNews/ButtonLoadMoreNews';
 
 function NewsSection() {
-  const { data, isPending, error } = useContext(GlobalContext);
+  const { data, isPending, error, favoriteRender } = useContext(GlobalContext);
   const [filter, setFilter] = useState('');
+  const [favorites, setFavorites] = useState<NewsArticleProps[]>([]);
+
+  useEffect(() => {
+    const favoritesArticles = JSON.parse(
+      localStorage.getItem('favoriteArticles') || '[]',
+    );
+    setFavorites(favoritesArticles);
+  }, [favoriteRender]);
 
   if (isPending) return <p>Carregando...</p>;
   if (error) return <p>{JSON.stringify(error)}</p>;
   if (!data || !data.items || data.items.length === 0) {
     return <p>Não há dados disponíveis</p>;
   }
-
-  const favorites = JSON.parse(localStorage.getItem('favoriteArticles') || '[]');
 
   const getFilteredNews = (selectedFilter: string) => {
     switch (selectedFilter) {
