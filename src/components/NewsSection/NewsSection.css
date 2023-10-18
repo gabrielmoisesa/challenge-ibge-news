@@ -32,15 +32,26 @@
     padding: 1rem 0;
     gap: 1.5rem;
 
+    
     .no-fav-news-message {
       font-weight: 500;
       font-size: 1.1rem;
+    }
+  }
+  
+  .column-layout {
+    flex-direction: column;
+
+    .news-article {
+      width: 100%;
+      min-height: 26vh;
+      padding-bottom: 0.5rem;
     }
   }
 
   .button-load-more-news-container {
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: center
   }
 }
