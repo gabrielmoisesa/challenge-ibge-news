@@ -1,10 +1,10 @@
 import './NewsSection.css';
 import { useContext, useEffect, useState } from 'react';
-import SortNews from '../SortNews/SortNews';
 import GlobalContext from '../../context/GlobalContext';
 import NewsArticle from '../NewsArticle/NewsArticle';
 import { NewsArticleProps } from '../../types';
 import ButtonLoadMoreNews from '../Buttons/ButtonLoadMoreNews/ButtonLoadMoreNews';
+import SortNewsIcon from './SortNewsIcon/SortNewsIcon';
 
 function NewsSection() {
   const { data, isPending, error, favoriteRender, newsQtd } = useContext(GlobalContext);
@@ -70,7 +70,7 @@ function NewsSection() {
             </span>
           </button>
         </div>
-        <SortNews />
+        <SortNewsIcon />
       </div>
       <div className="news-article-container">
         {filter === 'Favoritas' && filteredNews.length <= 0
