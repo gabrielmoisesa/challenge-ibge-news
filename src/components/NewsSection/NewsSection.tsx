@@ -4,7 +4,7 @@ import SortNews from '../SortNews/SortNews';
 import GlobalContext from '../../context/GlobalContext';
 import NewsArticle from '../NewsArticle/NewsArticle';
 import { NewsArticleProps } from '../../types';
-import ButtonLoadMoreNews from '../ButtonLoadMoreNews/ButtonLoadMoreNews';
+import ButtonLoadMoreNews from '../Buttons/ButtonLoadMoreNews/ButtonLoadMoreNews';
 
 function NewsSection() {
   const { data, isPending, error, favoriteRender, newsQtd } = useContext(GlobalContext);

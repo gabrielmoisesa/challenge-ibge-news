@@ -1,6 +1,6 @@
-import './ButtonLoadMoreNews.css';
 import { useContext, useState } from 'react';
-import GlobalContext from '../../context/GlobalContext';
+import GlobalContext from '../../../context/GlobalContext';
+import './ButtonLoadMoreNews.css';
 
 function ButtonLoadMoreNews() {
   const { loadMoreNews, newsQtd, maxNewsQtd } = useContext(GlobalContext);

@@ -1,8 +1,8 @@
 import './NewsArticle.css';
 import { NewsArticleProps } from '../../types';
-import ButtonNewsLink from '../ButtonNewsLink/ButtonNewsLink';
-import ButtonFavoriteNews from '../ButtonFavoriteNews/ButtonFavoriteNews';
 import formatDateToDaysAgo from '../../utils/formatDateToDaysAgo';
+import ButtonNewsLink from '../Buttons/ButtonNewsLink/ButtonNewsLink';
+import ButtonFavoriteNews from '../Buttons/ButtonFavoriteNews/ButtonFavoriteNews';
 
 function NewsArticle(props: NewsArticleProps) {
   // eslint-disable-next-line @typescript-eslint/naming-convention

@@ -1,9 +1,9 @@
 /* eslint-disable max-len */
 /* eslint-disable @typescript-eslint/naming-convention */
 import { useState, useEffect, useContext } from 'react';
-import { NewsArticleProps } from '../../types';
 import './ButtonFavoriteNews.css';
-import GlobalContext from '../../context/GlobalContext';
+import { NewsArticleProps } from '../../../types';
+import GlobalContext from '../../../context/GlobalContext';
 
 const toggleFavorite = (article: NewsArticleProps) => {
   const favorites = JSON.parse(localStorage.getItem('favoriteArticles') || '[]');

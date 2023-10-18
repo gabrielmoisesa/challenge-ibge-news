@@ -2,8 +2,8 @@ import './LatestNewsArticle.css';
 import { useContext } from 'react';
 import GlobalContext from '../../context/GlobalContext';
 import formatDateToDaysAgo from '../../utils/formatDateToDaysAgo';
-import ButtonNewsLink from '../ButtonNewsLink/ButtonNewsLink';
-import ButtonFavoriteNews from '../ButtonFavoriteNews/ButtonFavoriteNews';
+import ButtonFavoriteNews from '../Buttons/ButtonFavoriteNews/ButtonFavoriteNews';
+import ButtonNewsLink from '../Buttons/ButtonNewsLink/ButtonNewsLink';
 
 function LatestNewsArticle() {
   const { data, isPending, error } = useContext(GlobalContext);
