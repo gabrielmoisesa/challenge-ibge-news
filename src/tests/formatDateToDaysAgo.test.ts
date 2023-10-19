@@ -8,7 +8,7 @@ describe('formatDateToDaysAgo function', () => {
     const twoDaysAgo = new Date();
     twoDaysAgo.setDate(currentDate.getDate() - 2);
 
-    const currentDateStr = `${currentDate.getDate()}/${currentDate.getMonth() + 1}/${currentDate.getFullYear()} ${currentDate.getHours()}:${currentDate.getMinutes()}:${currentDate.getSeconds()}`;
+    const currentDateStr = `${currentDate.getDate().toString().padStart(2, '0')}/${(currentDate.getMonth() + 1).toString().padStart(2, '0')}/${currentDate.getFullYear()} ${currentDate.getHours()}:${currentDate.getMinutes()}:${currentDate.getSeconds()}`;
     const yesterdayStr = `${yesterday.getDate()}/${yesterday.getMonth() + 1}/${yesterday.getFullYear()} ${yesterday.getHours()}:${yesterday.getMinutes()}:${yesterday.getSeconds()}`;
     const twoDaysAgoStr = `${twoDaysAgo.getDate()}/${twoDaysAgo.getMonth() + 1}/${twoDaysAgo.getFullYear()} ${twoDaysAgo.getHours()}:${twoDaysAgo.getMinutes()}:${twoDaysAgo.getSeconds()}`;
 
