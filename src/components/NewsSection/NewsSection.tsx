@@ -71,7 +71,10 @@ function NewsSection() {
             </span>
           </button>
         </div>
-        <button onClick={ () => setChangeNewsLayout(!changeNewsLayout) }>
+        <button
+          onClick={ () => setChangeNewsLayout(!changeNewsLayout) }
+          data-testid="change-layout-btn"
+        >
           <SortNewsIcon />
         </button>
       </div>
@@ -81,6 +84,7 @@ function NewsSection() {
             ? 'news-article-container column-layout'
             : 'news-article-container'
         }
+        data-testid="news-article-container"
       >
         {filter === 'Favoritas' && filteredNews.length <= 0 ? (
           <p className="no-fav-news-message">Não há notícias favoritas...</p>

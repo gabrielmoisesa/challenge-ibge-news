@@ -59,4 +59,16 @@ describe('News Section', () => {
     expect(screen.getByRole('heading', { name: mockData.items[2].titulo })).toBeInTheDocument();
     expect(screen.queryByRole('heading', { name: mockData.items[1].titulo })).not.toBeInTheDocument();
   });
+
+  test('if the change news layout button works correctly', () => {
+    const changeLayoutButton = screen.getByTestId('change-layout-btn');
+    expect(changeLayoutButton).toBeInTheDocument();
+
+    const newsArticleContainer = screen.getByTestId('news-article-container');
+    expect(newsArticleContainer).toHaveClass('news-article-container');
+    expect(newsArticleContainer).not.toHaveClass('column-layout');
+
+    fireEvent.click(changeLayoutButton);
+    expect(newsArticleContainer).toHaveClass('column-layout');
+  });
 });
