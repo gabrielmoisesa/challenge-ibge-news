@@ -1,7 +1,7 @@
 import { fireEvent, render, screen } from '@testing-library/react';
 import App from '../App';
 import GlobalContext from '../context/GlobalContext';
-import { mockContextValue, mockData } from './mocks';
+import { mockContextValue, mockData } from './utils/mocks';
 
 describe('News Section', () => {
   beforeEach(() => {
