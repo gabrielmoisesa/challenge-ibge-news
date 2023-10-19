@@ -21,6 +21,11 @@
   .latest-news-info {
     width: 37%;
 
+    & h2 {
+      font-family: 'IBM Plex Serif', serif;
+      font-size: 1.75rem;
+    }
+
     .top-container {
       display: flex;
       justify-content: space-between;
