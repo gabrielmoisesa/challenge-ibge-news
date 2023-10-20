@@ -19,7 +19,7 @@ function NewsSection() {
     setFavorites(favoritesArticles);
   }, [favoriteRender]);
 
-  if (isPending) return <p>Carregando...</p>;
+  if (isPending) return null;
   if (error) return <p>{JSON.stringify(error)}</p>;
   if (!data || !data.items || data.items.length === 0) {
     return <p>Não há dados disponíveis</p>;
