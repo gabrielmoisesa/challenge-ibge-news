@@ -57,6 +57,10 @@
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1199px) {
+  .news-section {
+    margin-top: 4rem;
+  }
+
   .news-article-container {
     flex-direction: column;
 
@@ -94,6 +98,7 @@
 
 @media screen and (min-width: 601px) and (max-width: 1023px) {
   .news-section {
+    margin-top: 4rem;
 
     .news-filters-container {
       display: flex;
@@ -119,6 +124,7 @@
 
 @media screen and (max-width: 600px) {
   .news-section {
+    margin-top: 4rem;
 
     .news-filters-container {
       justify-content: center;
