@@ -31,4 +31,33 @@
       font-weight: 500;
     }
   }
+
+  & ul {
+    list-style: none;
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    gap: 1rem;
+    padding: 0;
+
+    & li, a {
+      height: fit-content;
+      width: fit-content;
+
+      & :hover {
+        & path {
+          fill: var(--green);
+        }
+      }
+
+      & svg {
+        width: 26px;
+        height: 26px;
+
+        & path {
+          fill: white;
+        }
+      }
+    }
+  }
 }
