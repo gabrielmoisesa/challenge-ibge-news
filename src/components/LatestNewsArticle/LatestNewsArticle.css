@@ -59,3 +59,31 @@
    }
   }
 }
+
+@media screen and (max-width: 780px) {
+  .latest-news-article {
+    flex-direction: column;
+    margin-top: 3rem;
+
+    & img {
+      width: 100%;
+      height: 50vw;
+    }
+
+    .latest-news-info {
+      width: 100%;
+
+      .top-container {
+        padding: 0;
+      }
+
+      & h2 {
+        margin-top: 0.35rem;
+      }
+
+      .latest-news-footer {
+        padding: 0;
+      }
+    }
+  }
+}
