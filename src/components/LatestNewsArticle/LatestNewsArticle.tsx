@@ -1,5 +1,6 @@
 import './LatestNewsArticle.css';
 import { useContext } from 'react';
+import { TailSpin } from 'react-loader-spinner';
 import GlobalContext from '../../context/GlobalContext';
 import formatDateToDaysAgo from '../../utils/formatDateToDaysAgo';
 import ButtonFavoriteNews from '../Buttons/ButtonFavoriteNews/ButtonFavoriteNews';
@@ -8,7 +9,18 @@ import ButtonNewsLink from '../Buttons/ButtonNewsLink/ButtonNewsLink';
 function LatestNewsArticle() {
   const { data, isPending, error } = useContext(GlobalContext);
 
-  if (isPending) return <p>Carregando...</p>;
+  if (isPending) {
+    return (<TailSpin
+      height="80"
+      width="80"
+      color="#05D465"
+      ariaLabel="tail-spin-loading"
+      radius="1"
+      wrapperStyle={ {} }
+      wrapperClass="article-loading"
+      visible
+    />);
+  }
   if (error) return <p>{JSON.stringify(error)}</p>;
   if (!data || !data.items || data.items.length === 0) {
     return <p>Não há dados disponíveis</p>;

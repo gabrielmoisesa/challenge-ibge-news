@@ -1,3 +1,7 @@
+.article-loading {
+  margin-top: 10vh;
+}
+
 .latest-news-article {
   display: flex;
   align-items: center;

@@ -20,9 +20,9 @@ function NewsSection() {
   }, [favoriteRender]);
 
   if (isPending) return null;
-  if (error) return <p>{JSON.stringify(error)}</p>;
+  if (error) return null;
   if (!data || !data.items || data.items.length === 0) {
-    return <p>Não há dados disponíveis</p>;
+    return null;
   }
 
   const getFilteredNews = (selectedFilter: string) => {
