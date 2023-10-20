@@ -50,3 +50,12 @@
     }
   }
 }
+
+@media screen and (min-width: 1190px) and (max-width: 1330px) {
+  .latest-news-article {
+   & img {
+    width: 39vw;
+    height: 26vw;
+   }
+  }
+}
