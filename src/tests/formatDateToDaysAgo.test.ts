@@ -1,5 +1,7 @@
 import formatDateToDaysAgo from '../utils/formatDateToDaysAgo';
 
+// Note: Sometimes, this test may fail due to reliance on the current date functionality.
+// If the test fails unexpectedly, consider resetting it and running it again. - Gabriel
 describe('formatDateToDaysAgo function', () => {
   it('should format the date correctly', () => {
     const currentDate = new Date();
