@@ -20,6 +20,9 @@
     background-color: var(--header-color);
     width: 100%;
 
+    & a {
+      text-decoration: none;
+      
       & h1 {
         margin: 0;
         color: white;
@@ -30,6 +33,7 @@
           text-decoration: underline var(--green);
         }
       }
+    }
   }
 }
 

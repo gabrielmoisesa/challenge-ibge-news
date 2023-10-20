@@ -3,5 +3,23 @@
   background-color: var(--header-color);
   color: white;
   width: 100%;
-  height: 10vh;
+  height: 12vh;
+  display: flex;
+  justify-content: center;
+  padding: 0 2rem;
+  padding-top: 1rem;
+
+
+  .footer-logo-container {
+
+    .footer-image-container {
+      background-color: var(--green);
+      width: fit-content;
+  
+      & img {
+        padding: 4px;
+        width: 6vh;
+      }
+    }
+  }
 }
