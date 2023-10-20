@@ -63,9 +63,10 @@
       & svg {
         width: 26px;
         height: 26px;
-
+        
         & path {
           fill: white;
+          transition: 0.3s;
         }
       }
     }
