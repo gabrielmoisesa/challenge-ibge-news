@@ -24,7 +24,7 @@
         margin: 0;
         color: white;
         font-size: 5vh;
-        letter-spacing: 1.6px;
+        letter-spacing: 2.6px;
         
         &:hover {
           text-decoration: underline var(--green);
