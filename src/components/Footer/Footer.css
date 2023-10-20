@@ -12,6 +12,10 @@
   > p {
     height: fit-content;
     width: 20vw;
+
+    > span {
+      font-weight: 500;
+    }
   }
 
   .footer-logo-container {

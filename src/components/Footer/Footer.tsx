@@ -6,7 +6,11 @@ import brMapImg from '../../assets/br-map.png';
 function Footer() {
   return (
     <footer className="main-footer">
-      <p>©2023 Gabriel Moises Alves</p>
+      <p>
+        ©2023
+        {' '}
+        <span>Gabriel Moises Alves</span>
+      </p>
       <div className="footer-logo-container">
         <div className="footer-image-container">
           <img src={ brMapImg } alt="Brazil Map Logo" />
