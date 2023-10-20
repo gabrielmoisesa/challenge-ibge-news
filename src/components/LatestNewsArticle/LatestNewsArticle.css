@@ -51,12 +51,39 @@
   }
 }
 
-@media screen and (min-width: 1190px) and (max-width: 1330px) {
+@media screen and (min-width: 1080px) and (max-width: 1330px) {
   .latest-news-article {
    & img {
     width: 39vw;
     height: 26vw;
    }
+  }
+}
+
+@media screen and (min-width: 781px) and (max-width: 1079px) {
+  .latest-news-article {
+    flex-direction: column;
+
+    & img {
+      width: 60vw;
+      height: 35vw;
+    }
+
+    .latest-news-info {
+      width: 60vw;
+
+      .top-container {
+        padding: 0;
+      }
+
+      & h2 {
+        margin-top: 0.35rem;
+      }
+
+      .latest-news-footer {
+        padding: 0;
+      }
+    }
   }
 }
 
