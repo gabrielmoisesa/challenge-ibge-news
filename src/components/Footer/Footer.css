@@ -5,12 +5,17 @@
   width: 100%;
   height: 12vh;
   display: flex;
-  justify-content: center;
-  padding: 0 2rem;
+  justify-content: space-between;
+  padding: 0 3rem;
   padding-top: 1rem;
 
+  > p {
+    height: fit-content;
+    width: 20vw;
+  }
 
   .footer-logo-container {
+    width: 20vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -34,9 +39,10 @@
 
   & ul {
     list-style: none;
-    width: fit-content;
+    width: 20vw;
     height: fit-content;
     display: flex;
+    flex-direction: row-reverse;
     gap: 1rem;
     padding: 0;
 
