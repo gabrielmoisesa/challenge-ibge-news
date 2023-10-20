@@ -21,9 +21,9 @@ function LatestNewsArticle() {
       visible
     />);
   }
-  if (error) return console.log(JSON.stringify(error));
+  if (error) return null;
   if (!data || !data.items || data.items.length === 0) {
-    return console.log('Não há dados disponíveis');
+    return null;
   }
 
   // eslint-disable-next-line @typescript-eslint/naming-convention
