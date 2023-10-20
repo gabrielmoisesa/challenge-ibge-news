@@ -91,3 +91,25 @@
 
     }
 }
+
+@media screen and (min-width: 543px) and (max-width: 1023px) {
+  .news-section {
+
+    .news-filters-container {
+
+      > button:last-child {
+        display: none;
+      }
+    }
+
+    .news-article-container {
+      flex-direction: column;
+  
+      .news-article {
+        width: 100%;
+        min-height: 26vh;
+        padding-bottom: 0.5rem;
+      }
+    }
+  }
+}
