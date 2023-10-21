@@ -17,7 +17,30 @@
     <a href="https://github.com/gabrielmoisesa">Autor</a>
   </p>
 </div>
-<br />
+
+<details>
+  <summary>Tabela de tópicos</summary>
+  <ol>
+    <li>
+      <a href="#sobre-o-projeto">Sobre o projeto</a>
+      <ul>
+        <li><a href="#principais-features">Principais Features</a></li>
+        <li><a href="#tecnologiasferramentas-utilizadas">Tecnologias/Ferramentas utilizadas</a></li>
+        <li><a href="#porque-a-escolha-dessas-tecnologiasferramentas">Porque a escolha dessas tecnologias/ferramentas?</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#como-rodar-a-aplicação">Como rodar a aplicação</a>
+      <ul>
+        <li><a href="#pré-requisitos">Pré-requisitos</a></li>
+        <li><a href="#passos-de-instalação">Passos de Instalação</a></li>
+      </ul>
+    </li>
+    <li><a href="#resultado---deploy">Resultado - Deploy</a></li>
+    <li><a href="#licença">Licença</a></li>
+    <li><a href="#autor">Autor</a></li>
+  </ol>
+</details>
 
 ## Sobre o projeto
 
