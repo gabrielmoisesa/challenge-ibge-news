@@ -39,7 +39,7 @@ describe('News Section', () => {
       </GlobalContext.Provider>,
     );
 
-    const noDataMessage = screen.getAllByText(/Não há dados disponíveis/i)[1];
+    const noDataMessage = screen.getByText(/Não há dados disponíveis/i);
     expect(noDataMessage).toBeInTheDocument();
   });
 

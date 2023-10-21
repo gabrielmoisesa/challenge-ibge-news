@@ -22,7 +22,7 @@ function NewsSection() {
   if (isPending) return null;
   if (error) return null;
   if (!data || !data.items || data.items.length === 0) {
-    return null;
+    return <p>Não há dados disponíveis</p>;
   }
 
   const getFilteredNews = (selectedFilter: string) => {
