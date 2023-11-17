@@ -31,18 +31,16 @@ Com a avaliação técnica dos projetos na turma, o IBGE NEWS foi finalista top 
 
 O projeto foi apresentado em uma live e está disponível no YouTube:
 
+### [Live completa](https://www.youtube.com/live/c6NiGlRtB0U?si=lrK7fNbDPsbn_u6b)
+
 <a href="https://www.youtube.com/live/c6NiGlRtB0U?si=lrK7fNbDPsbn_u6b">
-
-### Live completa
-
-<img src="./public/about-challenge-assets/c6NiGlRtB0U-HD.jpg" width=480>
+  <img src="./public/about-challenge-assets/c6NiGlRtB0U-HD.jpg" width=480>
 </a>
 
-<a href="https://www.youtube.com/live/c6NiGlRtB0U?si=k3IDlebzxg6TjzWs&t=1327">
+### [Apresentação do projeto](https://www.youtube.com/live/c6NiGlRtB0U?si=zCrdBV5DN4_d0lHB&t=1358)
 
-### Apresentação do projeto
-
-<img src="./public/about-challenge-assets/presentation-cape.png" width=480>
+<a href="https://www.youtube.com/live/c6NiGlRtB0U?si=zCrdBV5DN4_d0lHB&t=1358">
+  <img src="./public/about-challenge-assets/presentation-cape.png" width=480>
 </a>
 
 
