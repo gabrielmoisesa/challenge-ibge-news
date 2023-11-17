@@ -5,6 +5,7 @@ import Header from './components/Header/Header';
 import LatestNewsArticle from './components/LatestNewsArticle/LatestNewsArticle';
 import NewsSection from './components/NewsSection/NewsSection';
 import GlobalContext from './context/GlobalContext';
+import AwardBadge from './components/AwardBadge/AwardBadge';
 
 function App() {
   const { isPending } = useContext(GlobalContext);
@@ -12,6 +13,7 @@ function App() {
   return (
     <>
       <Header />
+      <AwardBadge />
       <main>
         <LatestNewsArticle />
         <NewsSection />
