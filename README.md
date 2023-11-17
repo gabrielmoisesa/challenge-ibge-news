@@ -1,7 +1,9 @@
 <br />
 <div align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="./public/br-map-green.png" alt="Logo" width="80" height="80">
+  <a href="./ABOUT-CHALLENGE.md">
+    <img src="./public/br-map-green-medal.png" alt="Logo" width="90" height="90">
+    <br/>
+    <i>Vencedor!</i>
   </a>
 
   <h3 align="center">IBGE News</h3>
@@ -13,6 +15,8 @@
     <a href="https://gabrielmoisesa.github.io/challenge-ibge-news">Demo</a>
     ·
     <a href="https://github.com/gabrielmoisesa/challenge-ibge-news/blob/main/README.md">Documentação</a>
+    ·
+    <a href="./ABOUT-CHALLENGE.md">Sobre o desafio</a>
     ·
     <a href="https://github.com/gabrielmoisesa">Autor</a>
   </p>
@@ -46,7 +50,7 @@
 
 <img src="./public/preview.png" width=720>
 
-> IBGE News é um projeto que foi desenvolvido como solução de um desafio técnico de React
+> IBGE News é um projeto que foi desenvolvido como solução de um [desafio técnico](./ABOUT-CHALLENGE.md) de React
 
 Essa é uma aplicação Web de páginas de notícias do [IBGE](https://pt.wikipedia.org/wiki/Instituto_Brasileiro_de_Geografia_e_Estat%C3%ADstica) (Instituto Brasileiro de Geografia e Estatística) que são obtidas através de sua [API de Notícias](https://servicodados.ibge.gov.br/api/docs/noticias?versao=3) oficial.
 
@@ -133,7 +137,7 @@ Este projeto é licenciado sob os termos da Licença MIT - consulte o arquivo [L
   <tr>
     <td align="center">
       <a href="https://github.com/gabrielmoisesa">
-        <img src="https://avatars.githubusercontent.com/u/131400376?v=4" width="100px;" alt="Davidson Marra"/><br>
+        <img src="https://avatars.githubusercontent.com/u/131400376?v=4" width="100px;" alt="Gabriel Alves"/><br>
         <sub>
           <b>Gabriel Moises Alves</b>
         </sub>
