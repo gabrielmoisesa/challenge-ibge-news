@@ -4,7 +4,7 @@ function AwardBadge() {
   return (
     <>
       <div className="badge-triangle" />
-      <p className="badge-text">1°</p>
+      <a href="https://github.com/gabrielmoisesa/challenge-ibge-news/blob/main/README.md" className="badge-text-link">1°</a>
     </>
   );
 }

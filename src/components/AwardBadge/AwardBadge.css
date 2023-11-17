@@ -1,4 +1,4 @@
-.badge-text, .badge-triangle {
+.badge-text-link, .badge-triangle {
   position: fixed;
 }
 
@@ -7,15 +7,22 @@
   right: 0;
   width: 0;
   height: 0;
-  border-left: 100px solid transparent;
-  border-bottom: 100px solid #FFBD00;
+  border-left: 110px solid transparent;
+  border-bottom: 110px solid var(--yellow);
   transform: rotate(270deg);
 }
 
-.badge-text {
-  top: 0;
+.badge-text-link {
+  top: 20px;
   right: 15px;
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   font-weight: bold;
-  color: #fff;
+  text-decoration: none;
+  color: white;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.2);
+    text-decoration: underline;
+  }
 }
