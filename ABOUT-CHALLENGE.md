@@ -35,14 +35,14 @@ O projeto foi apresentado em uma live e está disponível no YouTube:
 
 ### Live completa
 
-<img src="./public/c6NiGlRtB0U-HD.jpg" width=480>
+<img src="./public/about-challenge-assets/c6NiGlRtB0U-HD.jpg" width=480>
 </a>
 
 <a href="https://www.youtube.com/live/c6NiGlRtB0U?si=k3IDlebzxg6TjzWs&t=1327">
 
 ### Apresentação do projeto
 
-<img src="./public/presentation-cape.png" width=480>
+<img src="./public/about-challenge-assets/presentation-cape.png" width=480>
 </a>
 
 

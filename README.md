@@ -1,7 +1,7 @@
 <br />
 <div align="center">
   <a href="./ABOUT-CHALLENGE.md">
-    <img src="./public/br-map-green-medal.png" alt="Logo" width="90" height="90">
+    <img src="./public/readme-assets/br-map-green-medal.png" alt="Logo" width="90" height="90">
     <br/>
     <i>Vencedor!</i>
   </a>
@@ -48,7 +48,7 @@
 
 ## Sobre o projeto
 
-<img src="./public/preview.png" width=720>
+<img src="./public/readme-assets/preview.png" width=720>
 
 > IBGE News é um projeto que foi desenvolvido como solução de um [desafio técnico](./ABOUT-CHALLENGE.md) de React
 
@@ -83,7 +83,7 @@ O objetivo da aplicação com a obtenção das notícias é disponibilizar, orga
 
 **Testing Library**: O Testing Library foi utilizado para a criação de testes unitários e de integração. A criação de testes é um importante indicador de que as funcionalidades estão sendo verificadas, como o Mock da API e testes das principais funcionalidades. Por isso, a biblioteca foi utilizada e o projeto foi testado atingindo no minímo 90% de cobertura total de testes, 95% em funções e mais de 97% em lines e statements.
 
-<img src="./public/tests-coverage-report.png">
+<img src="./public/readme-assets/tests-coverage-report.png">
 
 **Vite**: O Vite foi utilizado como bundler da aplicação. Sua escolha foi por ser uma ferramenta nova, rápida e que traz uma experiência de desenvolvimento agradável.
 
